@@ -1,0 +1,11 @@
+action,ms,bytes,lang,code,repeat,minver,comment
+comment,0,0,q,,1,
+before,0,0,q,\l sentenceValidater.q,1,,Load in test file 
+true,0,0,q,func["The quick brown fox said \"hello Mr lazy dog\"."],1,,Valid Test 1
+true,0,0,q,func["The quick brown fox said hello Mr lazy dog."],1,,Valid Test 2
+true,0,0,q,func["One lazy dog is too few 13 is too many."],1,,Valid Test 3
+true,0,0,q,func["One lazy dog is too few thirteen is too many."],1,,Valid Test 4
+true,0,0,q,not func["The quick brown fox said \"hello Mr. lazy dog\"."],1,,Non-Valid Test 1
+true,0,0,q,not func["the quick brown fox said hello Mr lazy dog."],1,,Non-Valid Test 2
+true,0,0,q,not func["The quick brown fox said \"hello Mr lazy dog."],1,,Valid Test 3
+true,0,0,q,not func["One lazy dog is too few 12 is too many."],1,,Valid Test 4
